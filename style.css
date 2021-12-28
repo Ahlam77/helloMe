@@ -1,6 +1,19 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav article ads"
+        "nav footer footer";
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 20% 1fr 15%;
+    grid-gap: 10px;
+    height: 120vh;
+    margin: 0;
+}
+
 .butt{
-    padding-left: 45%;
-    margin-top: 25%;
+    padding-left: 250%;
+margin-top: 20%;
 }
 
 button {
@@ -39,4 +52,42 @@ button:before {
 
 button:hover:before {
  transform: translateX(15em);
+}
+
+
+#pageHeader,
+#pageFooter,
+#mainArticle,
+#mainNav,
+#siteAds {
+    padding: 1em;
+    background: rgb(10, 109, 248);
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageFooter {
+    grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+    position: relative;
+}
+
+#mainNav {
+    grid-area: nav;
+}
+
+#siteAds {
+    grid-area: ads;
+}
+
+#mainArticle>.phone {
+    position: absolute;
+    bottom: 0;
+    right: 1vw;
+    font-size: 3em;
 }
